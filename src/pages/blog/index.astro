@@ -1,7 +1,36 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro"
+import BlogCard from "../../components/BlogCard.astro"
 ---
 
 <BaseLayout title="Blog">
-  <p>Hello blogs</p>
+  <section id="blog-list">
+    <BlogCard 
+      image=""
+      alt="BlogCard Test"
+      title="Test"
+      desc="This is a test description"
+    />
+    <BlogCard 
+      image=""
+      alt="BlogCard Test"
+      title="Test"
+      desc="This is a test description"
+    />
+    <BlogCard 
+      image=""
+      alt="BlogCard Test"
+      title="Test"
+      desc="This is a test description"
+    />
+  </section>
 </BaseLayout>
+
+<style>
+  #blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+</style>

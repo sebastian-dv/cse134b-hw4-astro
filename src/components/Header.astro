@@ -2,7 +2,7 @@
 const { pathname } = Astro.url;
 console.log(pathname);
 ---
-<div>
+<div id="container">
   <header>
     <h1>My Long Blog</h1>
     <nav>
@@ -14,6 +14,9 @@ console.log(pathname);
 </div>
 
 <style>
+  #container {
+    width: 100%;
+  }
   header {
     width: 100%;
     display: flex;

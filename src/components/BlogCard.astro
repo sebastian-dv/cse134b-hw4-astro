@@ -1,0 +1,29 @@
+---
+const { image, alt, title,desc } = Astro.props;
+---
+<article class="blog-card">
+  <img src={image} alt={alt}>
+  <section>
+    <h2>{title}</h2>
+    <p>{desc}</p>
+  </section>
+</article>
+
+<style>
+  article {
+    display: flex;
+    gap: 1rem;
+    border: solid 1px lightgrey;
+    border-radius: 0.1rem;
+    padding: 1.5rem;
+    width: 100%;
+    img {
+      width: 40%;
+    }
+    section {
+      p {
+        padding-top: 0.5rem;
+      }
+    }
+  }
+</style>
