@@ -2,14 +2,16 @@
 const { pathname } = Astro.url;
 console.log(pathname);
 ---
-<header>
-  <h1>My Long Blog</h1>
-  <nav>
-    <a href="/" class={pathname === "/" ? "active" : ""}>Home</a>
-    <a href="/blog" class={pathname === "/blog" ? "active" : ""}>Blogs</a>
-  </nav>
-</header>
-<hr>
+<div>
+  <header>
+    <h1>My Long Blog</h1>
+    <nav>
+      <a href="/" class={pathname === "/" ? "active" : ""}>Home</a>
+      <a href="/blog" class={pathname === "/blog" ? "active" : ""}>Blogs</a>
+    </nav>
+  </header>
+  <hr>
+</div>
 
 <style>
   header {
