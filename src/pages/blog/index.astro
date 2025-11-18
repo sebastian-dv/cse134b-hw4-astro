@@ -1,35 +1,25 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import BlogCard from "../../components/BlogCard.astro"
+const posts = Object.values(import.meta.glob('./*.md', { eager: true })).reverse();
 ---
 
 <BaseLayout title="Blog">
   <section id="blog-list">
-    <BlogCard 
-      image=""
-      alt="BlogCard Test"
-      title="Test"
-      desc="This is a test description"
-    />
-    <BlogCard 
-      image=""
-      alt="BlogCard Test"
-      title="Test"
-      desc="This is a test description"
-    />
-    <BlogCard 
-      image=""
-      alt="BlogCard Test"
-      title="Test"
-      desc="This is a test description"
-    />
+    {posts.map(post => 
+      <BlogCard 
+      href={post.url}
+      title={post.frontmatter.title}
+      desc={post.frontmatter.desc}
+      />
+    )}
   </section>
 </BaseLayout>
 
 <style>
   #blog-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 0.5rem 0;
   }
