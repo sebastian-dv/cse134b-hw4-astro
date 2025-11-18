@@ -2,6 +2,42 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 ---
 
-<BaseLayout title="Home" home="active">
-  <p>Hello world</p>
+<BaseLayout title="Home">
+  <div id="content">
+    <h2>Welcome to my blog!</h2>
+    <section>
+      <h2>Who am I?</h2>
+      <p>
+        My name is Sebastian. I'm currently a student attending UCSD and majoring in Computer Science.
+        My two recent interests have been web development and golf. I love computer science and I love
+        living an active lifestyle, they are not mutually exclusive.
+      </p>
+    </section>
+    <section>
+      <h2>What to expect</h2>
+      <p>
+        This blog will consist of topics that I'm currently interested in and or want to learn more about. I think
+        using my blog to try and teach a topic will in turn help me get a better grasp on what I'm learning.
+      </p>
+    </section>
+    <section>
+      <h2>Get in contact</h2>
+      <h3>Email</h3>
+      <p>s6diaz@ucsd.edu</p>
+    </section>
+  </div>
 </BaseLayout>
+
+<style>
+  #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
